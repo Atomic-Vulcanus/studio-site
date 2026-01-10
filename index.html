@@ -2,192 +2,266 @@
 <html lang="pl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Atomic Vulcanus — Game Studio</title>
-  <meta name="description" content="Atomic Vulcanus — niezależne studio tworzące gry." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Atomic Vulcanus — Indie Game Studio</title>
+  <meta name="description" content="Atomic Vulcanus — modernistyczne indie studio tworzące gry oparte na systemach: progresja, klimat, długoterminowa satysfakcja." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Atomic Vulcanus — Indie Game Studio" />
+  <meta property="og:description" content="Gry oparte na systemach: progresja, klimat, długoterminowa satysfakcja." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%237cf0ff'/%3E%3Cstop offset='1' stop-color='%23b08cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect rx='22' width='96' height='96' fill='%230b0d12'/%3E%3Cpath d='M48 14c11 0 20 9 20 20S59 54 48 54 28 45 28 34s9-20 20-20Zm0 40c17 0 30 7 30 16v6H18v-6c0-9 13-16 30-16Z' fill='url(%23g)' opacity='.95'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <div class="bg"></div>
+  <div class="bg" aria-hidden="true">
+    <div class="grain"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="gridlines"></div>
+  </div>
 
-  <header class="container">
-    <nav class="nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">AV</div>
-        <div class="brandText">
-          <div class="brandName">Atomic Vulcanus</div>
-          <div class="brandTag">Indie Game Studio</div>
+  <header class="topbar" data-elevate>
+    <div class="container navwrap">
+      <a class="brand" href="#top" aria-label="Atomic Vulcanus">
+        <div class="mark" aria-hidden="true">AV</div>
+        <div class="brandtext">
+          <div class="brandname">Atomic Vulcanus</div>
+          <div class="brandtag">Indie Game Studio</div>
         </div>
-      </div>
+      </a>
 
-      <div class="navLinks">
-        <a href="#games">Gry</a>
-        <a href="#about">O nas</a>
-        <a href="#contact" class="btn">Kontakt</a>
+      <nav class="nav">
+        <a class="navlink" href="#projects">Projekty</a>
+        <a class="navlink" href="#about">O nas</a>
+        <a class="navlink" href="#contact">Kontakt</a>
+        <a class="navcta" href="#contact">Napisz</a>
+      </nav>
+
+      <button class="menu" id="menuBtn" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile" id="mobileNav" hidden>
+      <div class="container">
+        <a class="mitem" href="#projects">Projekty</a>
+        <a class="mitem" href="#about">O nas</a>
+        <a class="mitem" href="#contact">Kontakt</a>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <main class="container">
+  <main id="top">
     <section class="hero">
-      <div class="heroLeft">
-        <h1>
-          Robimy gry, które<br />
-          <span class="accent">wciągają na długo</span>.
-        </h1>
-
-        <p class="lead">
-          Atomic Vulcanus to niezależne studio tworzące gry mobilne.
-          Stawiamy na czytelny design, mocny klimat i dopracowane systemy.
-        </p>
-
-        <div class="ctaRow">
-          <a class="btn" href="#games">Zobacz gry</a>
-          <a class="btnGhost" href="#contact">Napisz do nas</a>
-        </div>
-
-        <div class="meta">
-          <div class="pill">Mobile</div>
-          <div class="pill">Unity</div>
-          <div class="pill">Indie</div>
-        </div>
-      </div>
-
-      <div class="heroRight">
-        <div class="card">
-          <div class="cardTop">
-            <div class="cardLabel">Status</div>
-            <div class="cardValue">Development</div>
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="kicker">
+            <span class="dot"></span>
+            <span>Systems-driven • Mobile-first • Unity</span>
           </div>
-          <div class="divider"></div>
-          <div class="cardTop">
-            <div class="cardLabel">Platformy</div>
-            <div class="cardValue">Android • iOS</div>
+
+          <h1 class="h1">
+            Tworzymy gry oparte na systemach,
+            <span class="accent">nie na trikach</span>.
+          </h1>
+
+          <p class="lead">
+            Atomic Vulcanus to niezależne studio skupione na progresji, czytelnym UX na mobile
+            i długoterminowej satysfakcji z rozgrywki. Budujemy małe, solidne rdzenie — i iterujemy je do perfekcji.
+          </p>
+
+          <div class="actions">
+            <a class="btn" href="#projects">Zobacz projekty</a>
+            <a class="btn ghost" href="#contact">Kontakt</a>
           </div>
-          <div class="divider"></div>
-          <div class="cardTop">
-            <div class="cardLabel">Kontakt</div>
-            <div class="cardValue"><a href="#contact">mail / social</a></div>
+
+          <div class="signal">
+            <div class="chip">Android</div>
+            <div class="chip">iOS</div>
+            <div class="chip">Idle / RPG / Simulation</div>
+            <div class="chip">Procedural</div>
+            <div class="chip">Live-ops ready</div>
           </div>
         </div>
 
-        <div class="badge">
-          <div class="badgeTitle">Nowa gra</div>
-          <div class="badgeText">Wkrótce więcej informacji</div>
+        <div class="hero-right">
+          <div class="panel">
+            <div class="panel-row">
+              <div class="label">Status</div>
+              <div class="value">Development</div>
+            </div>
+            <div class="panel-row">
+              <div class="label">Fokus</div>
+              <div class="value">Progression Systems</div>
+            </div>
+            <div class="panel-row">
+              <div class="label">Stack</div>
+              <div class="value">Unity • Services</div>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <div class="panel-note">
+              Aktualnie rozwijamy kilka projektów mobilnych.
+              Strona jest zwięzła celowo — bez marketingowej waty.
+            </div>
+          </div>
+
+          <div class="micro">
+            <div class="micro-card">
+              <div class="micro-title">Loop</div>
+              <div class="micro-text">Core → Progression → Reward → Repeat</div>
+            </div>
+            <div class="micro-card">
+              <div class="micro-title">Design</div>
+              <div class="micro-text">Readable UI, fast feedback, clarity</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="games" class="section">
-      <div class="sectionHead">
-        <h2>Gry</h2>
-        <p>Krótko i konkretnie — co robimy teraz.</p>
-      </div>
-
-      <div class="grid">
-        <article class="gameCard">
-          <div class="gameTop">
-            <div class="gameTitle">EvoPlanet</div>
-            <div class="gameTag">Idle • Space</div>
-          </div>
-          <p class="gameDesc">
-            Obserwuj i rozwijaj życie na losowo generowanej planecie. Biomy, warunki atmosferyczne i ewolucja.
-          </p>
-          <div class="gameLinks">
-            <span class="muted">Linki: wkrótce</span>
-          </div>
-        </article>
-
-        <article class="gameCard">
-          <div class="gameTop">
-            <div class="gameTitle">Guild Idle RPG</div>
-            <div class="gameTag">Idle • Dark Fantasy</div>
-          </div>
-          <p class="gameDesc">
-            Zarządzaj bohaterami, wyprawami i rozwojem gildii. Prosty core-loop, dużo satysfakcji z progresu.
-          </p>
-          <div class="gameLinks">
-            <span class="muted">Linki: wkrótce</span>
-          </div>
-        </article>
-
-        <article class="gameCard">
-          <div class="gameTop">
-            <div class="gameTitle">Project “Ads-to-Game”</div>
-            <div class="gameTag">Logic • Hordes</div>
-          </div>
-          <p class="gameDesc">
-            Gra inspirowana fejkowymi reklamami mobilnymi — bramki, wybory, rosnąca ekipa i realny gameplay.
-          </p>
-          <div class="gameLinks">
-            <span class="muted">Linki: wkrótce</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="sectionHead">
-        <h2>O nas</h2>
-        <p>Małe studio, duży upór. Budujemy rzeczy solidnie i iteracyjnie.</p>
-      </div>
-
-      <div class="twoCol">
-        <div class="panel">
-          <h3>Filozofia</h3>
-          <ul>
-            <li>Najpierw grywalny MVP, potem rozbudowa.</li>
-            <li>UI czytelne na mobile, bez chaosu.</li>
-            <li>Systemy, które dobrze skalują się w czasie.</li>
-          </ul>
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projekty</h2>
+          <p>Portfolio w formie krótkich, konkretnych opisów. Linki do store pojawią się, gdy będą sensowne.</p>
         </div>
 
-        <div class="panel">
-          <h3>Tech</h3>
-          <ul>
-            <li>Unity (mobile-first)</li>
-            <li>Analytics / LiveOps (docelowo)</li>
-            <li>Stabilne buildy i testowanie</li>
-          </ul>
+        <div class="projects">
+          <article class="proj">
+            <div class="proj-top">
+              <div class="proj-name">EvoPlanet</div>
+              <div class="proj-tags">Idle • Simulation • Space</div>
+            </div>
+            <p class="proj-desc">
+              Symulacja ewolucji życia na proceduralnie generowanych planetach. Biomy, atmosfera, zdarzenia,
+              rozwój cech i obserwowanie zmian w skali od kosmosu po powierzchnię.
+            </p>
+            <div class="proj-meta">
+              <span class="pill">In development</span>
+              <span class="pill subtle">Procedural generation</span>
+              <span class="pill subtle">Long-term progression</span>
+            </div>
+          </article>
+
+          <article class="proj">
+            <div class="proj-top">
+              <div class="proj-name">Guild Idle RPG</div>
+              <div class="proj-tags">Idle • RPG • Dark Fantasy</div>
+            </div>
+            <p class="proj-desc">
+              Zarządzanie gildią bohaterów, ekspedycje, rozwój miasta i kolekcjonowanie zasobów.
+              Czytelny core-loop i systemy, które dobrze skalują się w czasie.
+            </p>
+            <div class="proj-meta">
+              <span class="pill">In development</span>
+              <span class="pill subtle">Party management</span>
+              <span class="pill subtle">Expeditions</span>
+            </div>
+          </article>
+
+          <article class="proj">
+            <div class="proj-top">
+              <div class="proj-name">Ads-to-Game Prototype</div>
+              <div class="proj-tags">Logic • Hordes • Mobile</div>
+            </div>
+            <p class="proj-desc">
+              Projekt inspirowany formatem „fake ads”, przebudowany w spójny gameplay.
+              Zamiast clickbaitu: realne decyzje, ryzyko/nagroda i czytelne tempo rozwoju.
+            </p>
+            <div class="proj-meta">
+              <span class="pill">Prototype</span>
+              <span class="pill subtle">Rapid iteration</span>
+              <span class="pill subtle">Mechanics-first</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="sectionHead">
-        <h2>Kontakt</h2>
-        <p>Najprościej: mail. Możesz też podpiąć social linki.</p>
-      </div>
-
-      <div class="contactCard">
-        <div class="contactRow">
-          <div class="contactLabel">Email</div>
-          <div class="contactValue">
-            <a href="mailto:contact@atomicvulcanus.com">contact@atomicvulcanus.com</a>
-            <span class="muted">(zmień na swój)</span>
-          </div>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>O nas</h2>
+          <p>Małe studio. Duża dbałość o szczegóły.</p>
         </div>
 
-        <div class="divider"></div>
+        <div class="about">
+          <div class="about-card">
+            <h3>Jak pracujemy</h3>
+            <ul>
+              <li>Najpierw rdzeń (MVP), potem rozbudowa.</li>
+              <li>Weryfikujemy pętlę gry — nie „feature listę”.</li>
+              <li>UI ma być czytelne na małym ekranie.</li>
+              <li>Systemy projektujemy tak, by można je było skalować.</li>
+            </ul>
+          </div>
 
-        <div class="contactRow">
-          <div class="contactLabel">Social</div>
-          <div class="contactValue muted">
-            X / Bluesky / YouTube / Discord — dodasz później
+          <div class="about-card">
+            <h3>Na czym nam zależy</h3>
+            <ul>
+              <li>Progression i satysfakcja z decyzji.</li>
+              <li>Feedback, animacje i responsywność UI.</li>
+              <li>Stabilność buildów i sensowny telemetryczny feedback.</li>
+              <li>Brak nachalności — monetyzacja ma wspierać, nie psuć.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Kontakt</h2>
+          <p>Najszybciej złapiesz nas mailowo.</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact-card">
+            <div class="contact-row">
+              <div class="label">Email</div>
+              <div class="value">
+                <button class="copy" id="copyEmail" data-email="contact@atomicvulcanus.com">
+                  contact@atomicvulcanus.com
+                  <span class="hint">kliknij, aby skopiować</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="label">Social</div>
+              <div class="value links">
+                <a href="#" aria-label="X (do uzupełnienia)" class="disabled" tabindex="-1">X</a>
+                <a href="#" aria-label="YouTube (do uzupełnienia)" class="disabled" tabindex="-1">YouTube</a>
+                <a href="#" aria-label="Discord (do uzupełnienia)" class="disabled" tabindex="-1">Discord</a>
+              </div>
+            </div>
+
+            <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+              Skopiowano email
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div>© <span id="year"></span> Atomic Vulcanus. All rights reserved.</div>
-      <div class="muted">Made with GitHub Pages.</div>
+      <div class="container foot">
+        <div class="foot-left">© <span id="year"></span> Atomic Vulcanus</div>
+        <div class="foot-right">
+          <a href="#top" class="toplink">Do góry ↑</a>
+        </div>
+      </div>
     </footer>
   </main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="./main.js" defer></script>
 </body>
 </html>
